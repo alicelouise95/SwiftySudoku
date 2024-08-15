@@ -22,10 +22,17 @@ struct EasyView: View {
                         VStack(spacing: 20) {
                             Text("Easy")
                                 .font(Font.custom("Nunito-Regular", size: 20))
-                            GridView()
+                            
+                            GridView(viewModel: viewModel)
+                                .onAppear {
+                                    viewModel.startGame(difficulty: .easy)
+                                }
+                            
                             HStack(spacing: 3) {
                                 ForEach(1..<10) { number in
-                                    NumberButton(number: number, action: {_ in})
+                                    NumberButton(number: number, action: {_ in 
+                                        viewModel.enterNumber(number)
+                                    })
                                 }
                             }
                         }

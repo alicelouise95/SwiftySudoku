@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 class PuzzleViewModel: ObservableObject {
-    @Published var puzzle: [[Int]] = []
+    @Published var puzzle: [[Int]] = Array(repeating: Array(repeating: 0, count: 9), count: 9)
     @Published var selectedCell: (row: Int, col: Int)?
     @Published var mistakesCount: Int = 0
     @Published var isGameOver: Bool = false

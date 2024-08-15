@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
+    @ObservedObject var viewModel: PuzzleViewModel
     let gridSize: Int = 9
     let cellSize: CGFloat = 40
     
@@ -16,12 +17,18 @@ struct GridView: View {
             ForEach(0..<gridSize, id: \.self) { row in
                 HStack(spacing: 0) {
                     ForEach(0..<gridSize, id: \.self) { col in
-                        CellView()
-                            .frame(width: cellSize, height: cellSize)
-                            .border(Color.black, width: 1)
-                            .overlay(
-                                BorderOverlay(row: row, col: col)
-                            )
+                        CellView(
+                            number: viewModel.puzzle[row][col],
+                            isSelected: viewModel.selectedCell?.row == row && viewModel.selectedCell?.col == col
+                        )
+                        .frame(width: cellSize, height: cellSize)
+                        .border(Color.black, width: 1)
+                        .overlay(
+                            BorderOverlay(row: row, col: col)
+                        )
+                        .onTapGesture {
+                            viewModel.selectCell(row: row, col: col)
+                        }
                     }
                 }
             }
@@ -31,10 +38,14 @@ struct GridView: View {
 }
 
 struct CellView: View {
+    let number: Int
+    let isSelected: Bool
+    
     var body: some View {
-        Text("")
+        Text(number == 0 ? "" : "\(number)")
+            .font(Font.custom("Nunito-Regular", size: 20))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
+            .background(isSelected ? Color.yellow : Color.white)
     }
 }
 
@@ -73,13 +84,5 @@ struct BorderOverlay: View {
             }
             .stroke(Color.black, lineWidth: thickness)
         }
-    }
-}
-
-
-
-struct GridView_Previews: PreviewProvider {
-    static var previews: some View {
-        GridView()
     }
 }
