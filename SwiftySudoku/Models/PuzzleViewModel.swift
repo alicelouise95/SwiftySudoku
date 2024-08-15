@@ -65,4 +65,3 @@ class PuzzleViewModel: ObservableObject {
         startGame(difficulty: difficulty)
     }
 }
-

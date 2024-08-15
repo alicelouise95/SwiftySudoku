@@ -45,7 +45,7 @@ struct CellView: View {
         Text(number == 0 ? "" : "\(number)")
             .font(Font.custom("Nunito-Regular", size: 20))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(isSelected ? Color.yellow : Color.white)
+            .background(isSelected ? Color.highlightedCell : Color.unhighlightedCell)
     }
 }
 
