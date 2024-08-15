@@ -7,16 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30C801B72C6B4F9C0028E6E4 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C801B52C6B4F9C0028E6E4 /* Nunito.ttf */; };
+		30C801B82C6B4F9C0028E6E4 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C801B62C6B4F9C0028E6E4 /* Nunito-Italic.ttf */; };
+		30C801C62C6B59850028E6E4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801C52C6B59850028E6E4 /* MainView.swift */; };
+		30C801CA2C6B5E2A0028E6E4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801C92C6B5E2A0028E6E4 /* Button.swift */; };
+		30C801CD2C6CD4950028E6E4 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801CC2C6CD4950028E6E4 /* GridView.swift */; };
+		30C801D32C6CDE390028E6E4 /* EasyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801D22C6CDE390028E6E4 /* EasyView.swift */; };
+		30C801D52C6CDE3F0028E6E4 /* MediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801D42C6CDE3F0028E6E4 /* MediumView.swift */; };
+		30C801D72C6CDE430028E6E4 /* HardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801D62C6CDE430028E6E4 /* HardView.swift */; };
+		30C801DC2C6CE0770028E6E4 /* AppThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801DB2C6CE0770028E6E4 /* AppThemes.swift */; };
+		30C801DE2C6CE1450028E6E4 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801DD2C6CE1450028E6E4 /* Difficulty.swift */; };
+		30C801E12C6CE7720028E6E4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801E02C6CE7720028E6E4 /* SettingsView.swift */; };
+		30C801E32C6CE9CE0028E6E4 /* NumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801E22C6CE9CE0028E6E4 /* NumberButton.swift */; };
+		30C801E52C6E105E0028E6E4 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801E42C6E105E0028E6E4 /* Puzzle.swift */; };
+		30C801E72C6E13740028E6E4 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801E62C6E13740028E6E4 /* Timer.swift */; };
+		30C801E92C6E1A7C0028E6E4 /* PuzzleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801E82C6E1A7C0028E6E4 /* PuzzleViewModel.swift */; };
 		30F4E1692C63A5F400074009 /* SwiftySudokuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4E1682C63A5F400074009 /* SwiftySudokuApp.swift */; };
-		30F4E16B2C63A5F400074009 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4E16A2C63A5F400074009 /* ContentView.swift */; };
 		30F4E16D2C63A5F800074009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F4E16C2C63A5F800074009 /* Assets.xcassets */; };
 		30F4E1702C63A5F800074009 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F4E16F2C63A5F800074009 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30C801B52C6B4F9C0028E6E4 /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nunito.ttf; path = ../../../../../Library/Fonts/Nunito.ttf; sourceTree = "<group>"; };
+		30C801B62C6B4F9C0028E6E4 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		30C801B92C6B50A80028E6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		30C801C52C6B59850028E6E4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30C801C92C6B5E2A0028E6E4 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		30C801CC2C6CD4950028E6E4 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		30C801D22C6CDE390028E6E4 /* EasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyView.swift; sourceTree = "<group>"; };
+		30C801D42C6CDE3F0028E6E4 /* MediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumView.swift; sourceTree = "<group>"; };
+		30C801D62C6CDE430028E6E4 /* HardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardView.swift; sourceTree = "<group>"; };
+		30C801DB2C6CE0770028E6E4 /* AppThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppThemes.swift; path = SwiftySudoku/Models/AppThemes.swift; sourceTree = SOURCE_ROOT; };
+		30C801DD2C6CE1450028E6E4 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		30C801E02C6CE7720028E6E4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30C801E22C6CE9CE0028E6E4 /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
+		30C801E42C6E105E0028E6E4 /* Puzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		30C801E62C6E13740028E6E4 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		30C801E82C6E1A7C0028E6E4 /* PuzzleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewModel.swift; sourceTree = "<group>"; };
 		30F4E1652C63A5F400074009 /* SwiftySudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4E1682C63A5F400074009 /* SwiftySudokuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySudokuApp.swift; sourceTree = "<group>"; };
-		30F4E16A2C63A5F400074009 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30F4E16C2C63A5F800074009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30F4E16F2C63A5F800074009 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,9 +61,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3059CC912C6A4616006CEEA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				30C801B12C6A4FC50028E6E4 /* Fonts */,
+				30F4E16C2C63A5F800074009 /* Assets.xcassets */,
+				30C801B92C6B50A80028E6E4 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30C801B12C6A4FC50028E6E4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				30C801B62C6B4F9C0028E6E4 /* Nunito-Italic.ttf */,
+				30C801B52C6B4F9C0028E6E4 /* Nunito.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		30C801BC2C6B570E0028E6E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30C801C52C6B59850028E6E4 /* MainView.swift */,
+				30C801D22C6CDE390028E6E4 /* EasyView.swift */,
+				30C801D42C6CDE3F0028E6E4 /* MediumView.swift */,
+				30C801D62C6CDE430028E6E4 /* HardView.swift */,
+				30C801E02C6CE7720028E6E4 /* SettingsView.swift */,
+				30C801CC2C6CD4950028E6E4 /* GridView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30C801D82C6CDE830028E6E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30C801C92C6B5E2A0028E6E4 /* Button.swift */,
+				30C801E22C6CE9CE0028E6E4 /* NumberButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30C801DF2C6CE14B0028E6E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30C801DD2C6CE1450028E6E4 /* Difficulty.swift */,
+				30C801DB2C6CE0770028E6E4 /* AppThemes.swift */,
+				30C801E42C6E105E0028E6E4 /* Puzzle.swift */,
+				30C801E62C6E13740028E6E4 /* Timer.swift */,
+				30C801E82C6E1A7C0028E6E4 /* PuzzleViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		30F4E15C2C63A5F400074009 = {
 			isa = PBXGroup;
 			children = (
+				30F4E1682C63A5F400074009 /* SwiftySudokuApp.swift */,
 				30F4E1672C63A5F400074009 /* SwiftySudoku */,
 				30F4E1662C63A5F400074009 /* Products */,
 			);
@@ -51,9 +134,10 @@
 		30F4E1672C63A5F400074009 /* SwiftySudoku */ = {
 			isa = PBXGroup;
 			children = (
-				30F4E1682C63A5F400074009 /* SwiftySudokuApp.swift */,
-				30F4E16A2C63A5F400074009 /* ContentView.swift */,
-				30F4E16C2C63A5F800074009 /* Assets.xcassets */,
+				30C801BC2C6B570E0028E6E4 /* Views */,
+				30C801DF2C6CE14B0028E6E4 /* Models */,
+				30C801D82C6CDE830028E6E4 /* Components */,
+				3059CC912C6A4616006CEEA3 /* Resources */,
 				30F4E16E2C63A5F800074009 /* Preview Content */,
 			);
 			path = SwiftySudoku;
@@ -126,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F4E1702C63A5F800074009 /* Preview Assets.xcassets in Resources */,
+				30C801B72C6B4F9C0028E6E4 /* Nunito.ttf in Resources */,
+				30C801B82C6B4F9C0028E6E4 /* Nunito-Italic.ttf in Resources */,
 				30F4E16D2C63A5F800074009 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +223,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30F4E16B2C63A5F400074009 /* ContentView.swift in Sources */,
+				30C801C62C6B59850028E6E4 /* MainView.swift in Sources */,
+				30C801DC2C6CE0770028E6E4 /* AppThemes.swift in Sources */,
+				30C801E92C6E1A7C0028E6E4 /* PuzzleViewModel.swift in Sources */,
+				30C801D52C6CDE3F0028E6E4 /* MediumView.swift in Sources */,
+				30C801E52C6E105E0028E6E4 /* Puzzle.swift in Sources */,
+				30C801E72C6E13740028E6E4 /* Timer.swift in Sources */,
 				30F4E1692C63A5F400074009 /* SwiftySudokuApp.swift in Sources */,
+				30C801CD2C6CD4950028E6E4 /* GridView.swift in Sources */,
+				30C801E12C6CE7720028E6E4 /* SettingsView.swift in Sources */,
+				30C801DE2C6CE1450028E6E4 /* Difficulty.swift in Sources */,
+				30C801E32C6CE9CE0028E6E4 /* NumberButton.swift in Sources */,
+				30C801D72C6CDE430028E6E4 /* HardView.swift in Sources */,
+				30C801D32C6CDE390028E6E4 /* EasyView.swift in Sources */,
+				30C801CA2C6B5E2A0028E6E4 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +373,7 @@
 				DEVELOPMENT_TEAM = Z7WWX69883;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftySudoku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +403,7 @@
 				DEVELOPMENT_TEAM = Z7WWX69883;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftySudoku/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
