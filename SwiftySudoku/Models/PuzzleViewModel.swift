@@ -14,17 +14,24 @@ class PuzzleViewModel: ObservableObject {
     @Published var mistakesCount: Int = 0
     @Published var isGameOver: Bool = false
     @Published var isPuzzleCompleted: Bool = false
+    @Published var formattedTime: String = "00:00"
+
     
     private var puzzleModel = Puzzle()
     private var currentDifficulty: Difficulty?
+    private var timerModel = TimerModel()
     
     func startGame(difficulty: Difficulty) {
+        currentDifficulty = difficulty
         puzzle = puzzleModel.generateSudokuPuzzle(difficulty: difficulty)
-        
         mistakesCount = 0
         isGameOver = false
         isPuzzleCompleted = false
         selectedCell = nil
+        timerModel.startTimer()
+        timerModel.$elapsedTime
+            .map { String(format: "%02d:%02d", $0 / 60, $0 % 60) }
+            .assign(to: &$formattedTime)
     }
     
     func selectCell(row: Int, col: Int) {
@@ -45,6 +52,7 @@ class PuzzleViewModel: ObservableObject {
             
             if mistakesCount >= 3 {
                 isGameOver = true
+                timerModel.stopTimer() 
             }
         }
     }
@@ -58,10 +66,29 @@ class PuzzleViewModel: ObservableObject {
         
         isPuzzleCompleted = true
         isGameOver = true
+        timerModel.stopTimer()
     }
     
     func resetGame() {
         guard let difficulty = currentDifficulty else { return }
-        startGame(difficulty: difficulty)
+        puzzle = puzzleModel.generateSudokuPuzzle(difficulty: difficulty)
+        mistakesCount = 0
+        isGameOver = false
+        isPuzzleCompleted = false
+        selectedCell = nil
+        timerModel.resetTimer()
+        formattedTime = "00:00"
     }
+    
+    func getElapsedTime() -> Int {
+            return timerModel.elapsedTime
+        }
+        
+        func stopTimer() {
+            timerModel.stopTimer()
+        }
+        
+        func resetTimer() {
+            timerModel.resetTimer()
+        }
 }
