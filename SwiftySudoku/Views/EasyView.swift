@@ -11,6 +11,7 @@ struct EasyView: View {
     @State private var currentTheme: Theme = .SkyFrost
     @StateObject var viewModel = PuzzleViewModel()
     @State private var showAlert = false
+    @State private var showCongratsAlert = false
     @State private var navigateToMainView = false
     
     var body: some View {
@@ -60,6 +61,9 @@ struct EasyView: View {
                                                 if viewModel.mistakesCount >= 3 {
                                                     showAlert = true
                                                 }
+                                                if viewModel.isPuzzleCompleted {
+                                                    showCongratsAlert = true
+                                                }
                                             }
                                         }
                                     }
@@ -95,6 +99,19 @@ struct EasyView: View {
                             message: Text("You made 3 mistakes. Try again?"),
                             primaryButton: .default(Text("OK")) {
                                 viewModel.resetGame()
+                            },
+                            secondaryButton: .cancel(Text("Home")) {
+                                navigateToMainView = true
+                            }
+                        )
+                    }
+                    .alert(isPresented: $showCongratsAlert) {
+                        Alert(
+                            title: Text("Congrats!"),
+                            message: Text("You finished in \(viewModel.formattedTime). Try another?"),
+                            primaryButton: .default(Text("OK")) {
+                                viewModel.resetGame()
+                                
                             },
                             secondaryButton: .cancel(Text("Home")) {
                                 navigateToMainView = true
