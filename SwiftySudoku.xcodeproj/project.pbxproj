@@ -37,7 +37,7 @@
 		30C801D22C6CDE390028E6E4 /* EasyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyView.swift; sourceTree = "<group>"; };
 		30C801D42C6CDE3F0028E6E4 /* MediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumView.swift; sourceTree = "<group>"; };
 		30C801D62C6CDE430028E6E4 /* HardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardView.swift; sourceTree = "<group>"; };
-		30C801DB2C6CE0770028E6E4 /* AppThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppThemes.swift; path = SwiftySudoku/Models/AppThemes.swift; sourceTree = SOURCE_ROOT; };
+		30C801DB2C6CE0770028E6E4 /* AppThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppThemes.swift; path = SwiftySudoku/Resources/AppThemes.swift; sourceTree = SOURCE_ROOT; };
 		30C801DD2C6CE1450028E6E4 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		30C801E02C6CE7720028E6E4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		30C801E22C6CE9CE0028E6E4 /* NumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButton.swift; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		3059CC912C6A4616006CEEA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30C801DB2C6CE0770028E6E4 /* AppThemes.swift */,
 				30C801B12C6A4FC50028E6E4 /* Fonts */,
 				30F4E16C2C63A5F800074009 /* Assets.xcassets */,
 				30C801B92C6B50A80028E6E4 /* Info.plist */,
@@ -106,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				30C801DD2C6CE1450028E6E4 /* Difficulty.swift */,
-				30C801DB2C6CE0770028E6E4 /* AppThemes.swift */,
 				30C801E42C6E105E0028E6E4 /* Puzzle.swift */,
 				30C801E62C6E13740028E6E4 /* Timer.swift */,
 				30C801E82C6E1A7C0028E6E4 /* PuzzleViewModel.swift */,

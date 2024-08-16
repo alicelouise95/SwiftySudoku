@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EasyView: View {
-    
     @State private var currentTheme: Theme = .SkyFrost
     @StateObject var viewModel = PuzzleViewModel()
     @State private var showAlert = false
@@ -29,17 +28,22 @@ struct EasyView: View {
                     .overlay {
                         VStack {
                             Spacer()
-                            
                             VStack(spacing: 20) {
-                                HStack(spacing: 70) {
-                                    Text("Time: \(viewModel.formattedTime)")                                          .font(Font.custom("Nunito-Regular", size: 20))
+                                HStack(spacing: 90) {
+                                    VStack {
+                                        Text("Time:")
+                                        Text("\(viewModel.formattedTime)")
+                                            .font(Font.custom("Nunito-Regular", size: 20))
+                                    }
                                     
                                     Text("Easy")
-                                        .font(Font.custom("NunitoItalic-Regular", size: 20))
-                                    
-                                    
-                                    Text("Mistakes: \(viewModel.mistakesCount)/3")
                                         .font(Font.custom("Nunito-Regular", size: 20))
+                                    
+                                    VStack {
+                                        Text("Mistakes:")
+                                        Text("\(viewModel.mistakesCount)/3")
+                                            .font(Font.custom("Nunito-Regular", size: 20))
+                                    }
                                 }
                                 
                                 
@@ -48,16 +52,19 @@ struct EasyView: View {
                                         viewModel.startGame(difficulty: .easy)
                                     }
                                 
-                                HStack(spacing: 3) {
-                                    ForEach(1..<10) { number in
-                                        NumberButton(number: number) {
-                                            viewModel.enterNumber($0)
-                                            if viewModel.mistakesCount >= 3 {
-                                                showAlert = true
+                                VStack {
+                                    HStack(spacing: 3) {
+                                        ForEach(1..<10) { number in
+                                            NumberButton(number: number) {
+                                                viewModel.enterNumber($0)
+                                                if viewModel.mistakesCount >= 3 {
+                                                    showAlert = true
+                                                }
                                             }
                                         }
                                     }
                                 }
+                                .padding(.top, 20)
                             }
                             
                             Spacer()
