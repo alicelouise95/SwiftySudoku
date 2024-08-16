@@ -12,10 +12,8 @@ class Puzzle {
     
     func generateSudokuPuzzle(difficulty: Difficulty) -> [[Int]] {
         puzzle = Array(repeating: Array(repeating: 0, count: 9), count: 9)
-        
         fillSudoku()
         removeNumbersFromSudoku(cellsToRemove: difficulty.cellsToRemove)
-        
         return puzzle
     }
     
@@ -42,7 +40,6 @@ class Puzzle {
     
     func solveSudoku() -> Bool {
         guard let emptyCell = findEmptyCell() else { return true }
-        
         let (row, col) = emptyCell
         let numbers = (1...9).shuffled()
         

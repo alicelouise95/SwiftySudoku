@@ -41,5 +41,18 @@ enum Theme: String, Codable {
             )
         }
     }
+    
+    static var current: Theme {
+        get {
+            if let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme"),
+               let theme = Theme(rawValue: savedTheme) {
+                return theme
+            }
+            return .SkyFrost
+        }
+        set {
+            UserDefaults.standard.set(newValue.rawValue, forKey: "selectedTheme")
+        }
+    }
 }
 

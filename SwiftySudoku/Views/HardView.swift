@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HardView: View {
-    @State private var currentTheme: Theme = .SkyFrost
+    @State private var currentTheme: Theme = Theme.current
     @StateObject var viewModel = PuzzleViewModel()
     @State private var showAlert = false
     @State private var showCongratsAlert = false

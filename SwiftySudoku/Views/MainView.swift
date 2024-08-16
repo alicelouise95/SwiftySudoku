@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var currentTheme: Theme = .SkyFrost
-    
+    @State private var currentTheme: Theme = Theme.current
+
     var body: some View {
         NavigationStack {
             currentTheme.gradient
@@ -37,19 +37,19 @@ struct MainView: View {
                         
                         VStack(spacing: 20) {
                             NavigationLink(destination: EasyView()) {
-                                ButtonView(label: "Easy")
+                                ButtonView(label: "Easy", isSelected: false)
                             }
                             
                             NavigationLink(destination: MediumView()) {
-                                ButtonView(label: "Medium")
+                                ButtonView(label: "Medium", isSelected: false)
                             }
                             
                             NavigationLink(destination: HardView()) {
-                                ButtonView(label: "Hard")
+                                ButtonView(label: "Hard", isSelected: false)
                             }
                             
                             NavigationLink(destination: SettingsView()) {
-                                ButtonView(label: "Settings")
+                                ButtonView(label: "Settings", isSelected: false)
                             }
                             
                         }
