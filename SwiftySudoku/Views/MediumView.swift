@@ -11,7 +11,8 @@ struct MediumView: View {
     @State private var currentTheme: Theme = Theme.current
     @StateObject var viewModel = PuzzleViewModel()
     @State private var showAlert = false
-    @State private var showCongratsAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
     @State private var navigateToMainView = false
     
     var body: some View {
@@ -58,12 +59,7 @@ struct MediumView: View {
                                         ForEach(1..<10) { number in
                                             NumberButton(number: number) {
                                                 viewModel.enterNumber($0)
-                                                if viewModel.mistakesCount >= 3 {
-                                                    showAlert = true
-                                                }
-                                                if viewModel.isPuzzleCompleted {
-                                                    showCongratsAlert = true
-                                                }
+                                                checkForGameOverOrCompletion()
                                             }
                                         }
                                     }
@@ -105,13 +101,12 @@ struct MediumView: View {
                             }
                         )
                     }
-                    .alert(isPresented: $showCongratsAlert) {
+                    .alert(isPresented: $showAlert) {
                         Alert(
-                            title: Text("Congrats!"),
-                            message: Text("You finished in \(viewModel.formattedTime). Try another?"),
+                            title: Text(alertTitle),
+                            message: Text(alertMessage),
                             primaryButton: .default(Text("OK")) {
                                 viewModel.resetGame()
-                                
                             },
                             secondaryButton: .cancel(Text("Home")) {
                                 navigateToMainView = true
@@ -122,4 +117,18 @@ struct MediumView: View {
             .navigationBarBackButtonHidden(true)
         }
     }
+    
+    private func checkForGameOverOrCompletion() {
+        if viewModel.mistakesCount >= 3 {
+            alertTitle = "Game Over"
+            alertMessage = "You made 3 mistakes. Try again?"
+            showAlert = true
+        } else if viewModel.isPuzzleCompleted {
+            alertTitle = "Congrats!"
+            alertMessage = "You finished in \(viewModel.formattedTime). Try another?"
+            showAlert = true
+        }
+    }
 }
+
+
