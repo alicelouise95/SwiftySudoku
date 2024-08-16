@@ -46,6 +46,7 @@ struct CellView: View {
             .font(Font.custom("Nunito-Regular", size: 20))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(isSelected ? Color.highlightedCell : Color.unhighlightedCell)
+            .foregroundColor(Color("FontColor"))
     }
 }
 

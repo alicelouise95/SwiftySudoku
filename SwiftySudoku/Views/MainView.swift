@@ -25,8 +25,11 @@ struct MainView: View {
                             HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                                 Text("swifty")
                                     .font(Font.custom("NunitoItalic-Regular", size: 40))
+                                    .foregroundColor(Color("FontColor"))
                                 Text("sudoku")
                                     .font(Font.custom("Nunito-Regular", size: 40))
+                                    .foregroundColor(Color("FontColor"))
+
                             }
                             
                             Image("SwiftySudokuLogo")

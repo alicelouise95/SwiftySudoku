@@ -20,6 +20,7 @@ struct SettingsView: View {
                         
                         Text("Settings")
                             .font(Font.custom("Nunito-Regular", size: 24))
+                            .foregroundColor(Color("FontColor"))
                         
                         Spacer()
                         

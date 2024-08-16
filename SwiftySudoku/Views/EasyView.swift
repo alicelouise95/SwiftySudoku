@@ -34,17 +34,24 @@ struct EasyView: View {
                                 HStack(spacing: 90) {
                                     VStack {
                                         Text("Time:")
+                                            .font(Font.custom("Nunito-Regular", size: 20))
+                                            .foregroundColor(Color("FontColor"))
                                         Text("\(viewModel.formattedTime)")
                                             .font(Font.custom("Nunito-Regular", size: 20))
+                                            .foregroundColor(Color("FontColor"))
                                     }
                                     
                                     Text("Easy")
                                         .font(Font.custom("Nunito-Regular", size: 20))
+                                        .foregroundColor(Color("FontColor"))
                                     
                                     VStack {
                                         Text("Mistakes:")
+                                            .font(Font.custom("Nunito-Regular", size: 20))
+                                            .foregroundColor(Color("FontColor"))
                                         Text("\(viewModel.mistakesCount)/3")
                                             .font(Font.custom("Nunito-Regular", size: 20))
+                                            .foregroundColor(Color("FontColor"))
                                     }
                                 }
                                 
