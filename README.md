@@ -18,4 +18,6 @@ SwiftySudoku is a simple and customizable Sudoku puzzle game built with SwiftUI.
 
 ![SwiftySudoku4](https://github.com/user-attachments/assets/3ec74fe1-3f5d-49e5-9b4a-5885b5463c76)
 
+![swifty 2 5](https://github.com/user-attachments/assets/24564d0a-3606-4fef-8bb9-fd841786d3ac)
+
 ![SwiftySudoku5](https://github.com/user-attachments/assets/60acef2a-0d46-494f-90da-4ba3f0a3cfdf)
