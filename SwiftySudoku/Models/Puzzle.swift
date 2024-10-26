@@ -25,10 +25,10 @@ class Puzzle {
         
         puzzle[row][col] = number
         let isSolvable = isPuzzleSolvable()
-        puzzle[row][col] = 0 // revert the change
-        
+        puzzle[row][col] = 0
         return isSolvable
     }
+
     
     func isPuzzleSolvable() -> Bool {
         return solveSudoku()
