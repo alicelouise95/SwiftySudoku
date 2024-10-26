@@ -1,12 +1,3 @@
-//
-//  PuzzleModel.swift
-//  SwiftySudoku
-//
-//  Created by Alice Wheeler on 2024-08-15.
-//
-
-import Foundation
-
 class Puzzle {
     var puzzle: [[Int]] = []
     
@@ -31,7 +22,16 @@ class Puzzle {
                 if puzzle[i][j] == number { return false }
             }
         }
-        return true
+        
+        puzzle[row][col] = number
+        let isSolvable = isPuzzleSolvable()
+        puzzle[row][col] = 0 // revert the change
+        
+        return isSolvable
+    }
+    
+    func isPuzzleSolvable() -> Bool {
+        return solveSudoku()
     }
     
     func fillSudoku() {
