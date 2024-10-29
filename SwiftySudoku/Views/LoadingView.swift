@@ -18,6 +18,8 @@ struct LoadingView: View {
                     VStack(spacing: 40){
                         Text("Generating your puzzle...")
                             .font(Font.custom("NunitoItalic-Regular", size: 20))
+                            .foregroundColor(Color("FontColor"))
+
                         
                         ProgressView()
                             .scaleEffect(2)

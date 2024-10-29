@@ -10,6 +10,7 @@ import SwiftUI
 
 class PuzzleViewModel: ObservableObject {
     @Published var puzzle: [[Int]] = Array(repeating: Array(repeating: 0, count: 9), count: 9)
+    @Published var isLoading: Bool = false
     @Published var selectedCell: (row: Int, col: Int)?
     @Published var mistakesCount: Int = 0
     @Published var isGameOver: Bool = false
@@ -22,16 +23,27 @@ class PuzzleViewModel: ObservableObject {
     private var timerModel = TimerModel()
     
     func startGame(difficulty: Difficulty) {
+        isLoading = true 
         currentDifficulty = difficulty
-        puzzle = puzzleModel.generateSudokuPuzzle(difficulty: difficulty)
         mistakesCount = 0
         isGameOver = false
         isPuzzleCompleted = false
         selectedCell = nil
-        timerModel.startTimer()
-        timerModel.$elapsedTime
-            .map { String(format: "%02d:%02d", $0 / 60, $0 % 60) }
-            .assign(to: &$formattedTime)
+        formattedTime = "00:00"
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            let generatedPuzzle = self.puzzleModel.generateSudokuPuzzle(difficulty: difficulty)
+            
+            DispatchQueue.main.async {
+                self.puzzle = generatedPuzzle
+                self.isLoading = false
+                self.timerModel.startTimer()
+                
+                self.timerModel.$elapsedTime
+                    .map { String(format: "%02d:%02d", $0 / 60, $0 % 60) }
+                    .assign(to: &self.$formattedTime)
+            }
+        }
     }
     
     func selectCell(row: Int, col: Int) {

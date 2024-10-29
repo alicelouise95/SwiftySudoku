@@ -34,6 +34,14 @@ struct GridView: View {
             }
         }
         .border(Color.black, width: 1)
+        .overlay(
+            Group {
+                if viewModel.isLoading {
+                    LoadingView()
+                        .edgesIgnoringSafeArea(.all)
+                }
+            }
+        )
     }
 }
 
