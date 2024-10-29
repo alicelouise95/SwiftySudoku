@@ -5,7 +5,7 @@ class Puzzle {
     
     func generateSudokuPuzzle(difficulty: Difficulty) -> [[Int]] {
         puzzle = Array(repeating: Array(repeating: 0, count: 9), count: 9)
-        fillSudoku()  // Create a completely filled and valid Sudoku
+        fillSudoku()  
         removeNumbersToCreatePuzzle(cellsToRemove: difficulty.cellsToRemove)
         return puzzle
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		309CB21E2CCE618F00915DEC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309CB21D2CCE618F00915DEC /* LoadingView.swift */; };
 		30C801B72C6B4F9C0028E6E4 /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C801B52C6B4F9C0028E6E4 /* Nunito.ttf */; };
 		30C801B82C6B4F9C0028E6E4 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C801B62C6B4F9C0028E6E4 /* Nunito-Italic.ttf */; };
 		30C801C62C6B59850028E6E4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C801C52C6B59850028E6E4 /* MainView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		309CB21D2CCE618F00915DEC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		30C801B52C6B4F9C0028E6E4 /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Nunito.ttf; path = ../../../../../Library/Fonts/Nunito.ttf; sourceTree = "<group>"; };
 		30C801B62C6B4F9C0028E6E4 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		30C801B92C6B50A80028E6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				30C801C52C6B59850028E6E4 /* MainView.swift */,
+				309CB21D2CCE618F00915DEC /* LoadingView.swift */,
 				30C801D22C6CDE390028E6E4 /* EasyView.swift */,
 				30C801D42C6CDE3F0028E6E4 /* MediumView.swift */,
 				30C801D62C6CDE430028E6E4 /* HardView.swift */,
@@ -231,6 +234,7 @@
 				30C801E72C6E13740028E6E4 /* Timer.swift in Sources */,
 				30F4E1692C63A5F400074009 /* SwiftySudokuApp.swift in Sources */,
 				30C801CD2C6CD4950028E6E4 /* GridView.swift in Sources */,
+				309CB21E2CCE618F00915DEC /* LoadingView.swift in Sources */,
 				30C801E12C6CE7720028E6E4 /* SettingsView.swift in Sources */,
 				30C801DE2C6CE1450028E6E4 /* Difficulty.swift in Sources */,
 				30C801E32C6CE9CE0028E6E4 /* NumberButton.swift in Sources */,
